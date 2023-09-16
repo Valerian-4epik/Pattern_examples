@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _MODEL_VIEW_ADAPTER_.Scripts
 {
-    public sealed class MoneyPanel : MonoBehaviour
+    public sealed class CurrencyPanel : MonoBehaviour
     {
         [SerializeField]
         private TMP_Text _currencyText;
@@ -24,7 +24,7 @@ namespace _MODEL_VIEW_ADAPTER_.Scripts
         {
             DOTween
                 .Sequence()
-                .Append(_currencyText.transform.DOScale(new Vector3(1.1f, 1.1f, 1.0f), 0.1f))
+                .Append(_currencyText.transform.DOScale(new Vector3(1.2f, 1.2f, 1.0f), 0.1f))
                 .Append(_currencyText.transform.DOScale(new Vector3(1.0f, 1.0f, 1.0f), 0.3f));
         }
     }

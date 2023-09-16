@@ -1,28 +1,23 @@
-using System;
-using UnityEngine;
-using Zenject;
-
-namespace _MODEL_VIEW_ADAPTER_.Scripts
+namespace _MODEL_VIEW_ADAPTER_.Scripts.NonMonoBehavior
 {
-    public class MoneyPanelAdapter : MonoBehaviour
+    public sealed class MoneyPanelAdapterNonMono
     {
-        [SerializeField] private CurrencyPanel _view;
+        private readonly CurrencyPanel _view;
+        private readonly MoneyStorage _storage;
 
-        private MoneyStorage _storage;
-
-        [Inject]
-        public void Construct(MoneyStorage storage)
+        public MoneyPanelAdapterNonMono(CurrencyPanel view, MoneyStorage storage)
         {
+            _view = view;
             _storage = storage;
         }
 
-        private void OnEnable()
+        public void Enable()
         {
             _storage.OnMoneyChanged += OnMoneyChanged;
             _view.SetupMoney(_storage.Money.ToString());
         }
 
-        private void OnDisable()
+        public void Disable()
         {
             _storage.OnMoneyChanged -= OnMoneyChanged;
         }

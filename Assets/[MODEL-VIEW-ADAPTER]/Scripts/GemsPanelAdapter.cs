@@ -1,30 +1,29 @@
-using System;
 using UnityEngine;
 using Zenject;
 
 namespace _MODEL_VIEW_ADAPTER_.Scripts
 {
-    public class MoneyPanelAdapter : MonoBehaviour
+    public class GemsPanelAdapter : MonoBehaviour
     {
         [SerializeField] private CurrencyPanel _view;
 
-        private MoneyStorage _storage;
+        private GemStorage _storage;
 
         [Inject]
-        public void Construct(MoneyStorage storage)
+        public void Construct(GemStorage storage)
         {
             _storage = storage;
         }
 
         private void OnEnable()
         {
-            _storage.OnMoneyChanged += OnMoneyChanged;
-            _view.SetupMoney(_storage.Money.ToString());
+            _storage.OnGemChanged += OnMoneyChanged;
+            _view.SetupMoney(_storage.Gem.ToString());
         }
 
         private void OnDisable()
         {
-            _storage.OnMoneyChanged -= OnMoneyChanged;
+            _storage.OnGemChanged -= OnMoneyChanged;
         }
 
         private void OnMoneyChanged(int money)
