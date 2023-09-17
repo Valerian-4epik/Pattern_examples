@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using _MODEL_VIEW_ADAPTER_.Scripts.MonoContext;
 using UnityEngine;
 using Zenject;
 
-namespace _MODEL_VIEW_ADAPTER_.Scripts.MonoContext
+namespace _MODEL_VIEW_ADAPTER_.Scripts.MoneyBalance_example.MonoContext
 {
-    public class UISystemInstallerMonoContext : MonoContext
+    public class UISystemInstallerMonoContext : Scripts.MonoContext.MonoContext
     {
         [SerializeField] private CurrencyPanel _moneyView;
         [SerializeField] private CurrencyPanel _gemsView;

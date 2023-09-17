@@ -27,7 +27,7 @@ namespace _MODEL_VIEW_ADAPTER_.Scripts.MonoContext
         {
             foreach (var component in provideComponents)
             {
-                if (component is IEnableComponent enableComponent) //посмотреть
+                if (component is IEnableComponent enableComponent)
                 {
                     _enableComponents.Add(enableComponent);
                 }
