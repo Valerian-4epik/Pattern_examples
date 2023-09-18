@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace _MODEL_VIEW_ADAPTER_.Scripts.HeroCharacteristics_practice
@@ -19,18 +20,21 @@ namespace _MODEL_VIEW_ADAPTER_.Scripts.HeroCharacteristics_practice
 
         public float GetSpeed() => _speed;
 
+        [Button]
         public void SetHitPoints(int hitPoints)
         {
             _hitPoints = hitPoints;
             OnHitPointsChanged?.Invoke(_hitPoints);
         }
 
+        [Button]
         public void SetDamage(int damage)
         {
             _damage = damage;
             OnDamageChanged?.Invoke(_damage);
         }
-
+            
+        [Button]
         public void SetSpeed(float speed)
         {
             _speed = speed;

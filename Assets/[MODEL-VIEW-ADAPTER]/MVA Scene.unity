@@ -135,7 +135,7 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7849294413187671527}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &50722081
+--- !u!114 &50722080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,8 +477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bc25407233495f8511ad74273b78cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moneyView: {fileID: 50722081}
-  _gemsView: {fileID: 1166651690}
+  _moneyView: {fileID: 50722080}
+  _gemsView: {fileID: 1166651689}
 --- !u!1 &864733833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1037,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7328300471030656841, guid: 5142b7fd01a48e547bcea1e8559aabf3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1166651690}
+      addedObject: {fileID: 1166651689}
   m_SourcePrefab: {fileID: 100100000, guid: 5142b7fd01a48e547bcea1e8559aabf3, type: 3}
 --- !u!224 &1166651686 stripped
 RectTransform:
@@ -1063,7 +1063,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1166651685}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1166651690
+--- !u!114 &1166651689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1213,5 +1213,5 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7328300471030656841, guid: 5142b7fd01a48e547bcea1e8559aabf3,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 50722081}
+      addedObject: {fileID: 50722080}
   m_SourcePrefab: {fileID: 100100000, guid: 5142b7fd01a48e547bcea1e8559aabf3, type: 3}

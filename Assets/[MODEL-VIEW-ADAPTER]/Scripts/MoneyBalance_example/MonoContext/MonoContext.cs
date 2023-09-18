@@ -39,7 +39,7 @@ namespace _MODEL_VIEW_ADAPTER_.Scripts.MonoContext
             }
         }
 
-        protected virtual IEnumerable<object> ProvideComponents() //посмотреть
+        protected virtual IEnumerable<object> ProvideComponents()
         {
             yield break;
         }
