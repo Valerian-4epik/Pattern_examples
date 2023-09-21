@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817977301f4c8a7449a505e5256e1fce, type: 3}
+  m_Name: Boots
+  m_EditorClassIdentifier: 
+  <Icon>k__BackingField: {fileID: 21300000, guid: d48494ba22197bc43afab224ba36a197,
+    type: 3}
+  <Title>k__BackingField: "\u0411\u043E\u0442\u0438\u043D\u043A\u0438"
+  <Description>k__BackingField: "\u041F\u0430\u0440\u0430 \u043A\u043E\u0436\u0430\u043D\u044B\u0445
+    \u0431\u043E\u0442\u0438\u043D\u043E\u043A"
+  <Price>k__BackingField: 80

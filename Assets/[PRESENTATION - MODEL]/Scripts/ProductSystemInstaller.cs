@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class ProductSystemInstaller : MonoBehaviour
+namespace _PRESENTATION___MODEL_.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ProductSystemInstaller : MonoInstaller
     {
-        
-    }
+        [SerializeField] private ProductBuyer _productBuyer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void InstallBindings()
+        {
+            Container.Bind<ProductBuyer>()
+                .AsSingle()
+                .OnInstantiated<ProductBuyer>((_, it) => _productBuyer = it)
+                .NonLazy();
+        }
     }
 }
