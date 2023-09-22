@@ -1,11 +1,10 @@
 using System;
-using _PRESENTATION___MODEL_.Scripts.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace _PRESENTATION___MODEL_.Scripts
+namespace _PRESENTATION___MODEL_.Scripts.UI
 {
     public sealed class BuyButton : MonoBehaviour
     {
