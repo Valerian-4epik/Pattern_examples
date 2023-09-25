@@ -1,12 +1,12 @@
 using _MODEL_VIEW_ADAPTER_.Scripts;
 using _PRESENTATION___MODEL_.Scripts.UI;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Sirenix.OdinInspector;
 using Zenject;
 
-namespace _PRESENTATION___MODEL_.Scripts.BadPractice
+namespace _PRESENTATION___MODEL_.Scripts.GoodPractice
 {
     public class ProductPopup : MonoBehaviour
     {
