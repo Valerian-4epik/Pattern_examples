@@ -6,26 +6,28 @@ namespace _DI_OTUS_GULKIN_.Scripts
         Listeners.IStartGameListener,
         Listeners.IFinishGameListener
     {
+        private IMoveInput _input;
+        private IPlayer _player;
         
-        [SerializeField]
-        private KeyboardInput input;
-
-        [SerializeField]
-        private Player player;
+        public void Construct(IMoveInput input, IPlayer player)
+        {
+            _input = input;
+            _player = player;
+        }
 
         public void OnStartGame()
         {
-            this.input.OnMove += this.OnMove;
+            _input.OnMove += OnMove;
         }
 
         public void OnFinishGame()
         {
-            this.input.OnMove -= this.OnMove;
+            _input.OnMove -= OnMove;
         }
 
         private void OnMove(Vector3 direction)
         {
-            this.player.Move(direction);
+            _player.Move(direction);
         }
     }
 }

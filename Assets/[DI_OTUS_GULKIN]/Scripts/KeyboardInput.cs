@@ -4,18 +4,19 @@ using UnityEngine;
 namespace _DI_OTUS_GULKIN_.Scripts
 {
     public sealed class KeyboardInput : MonoBehaviour,
+        IMoveInput,
         Listeners.IStartGameListener,
         Listeners.IFinishGameListener
     {
-        private bool isActive;
+        private bool _isActive;
         
         public event Action<Vector3> OnMove;
 
         private void Update()
         {
-            if (this.isActive)
+            if (_isActive)
             {
-                this.HandleKeyboard();
+                HandleKeyboard();
             }
         }
 
@@ -23,35 +24,35 @@ namespace _DI_OTUS_GULKIN_.Scripts
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                this.Move(Vector3.forward);
+                Move(Vector3.forward);
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
-                this.Move(Vector3.back);
+                Move(Vector3.back);
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                this.Move(Vector3.left);
+                Move(Vector3.left);
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-                this.Move(Vector3.right);
+                Move(Vector3.right);
             }
         }
 
         private void Move(Vector3 direction)
         {
-            this.OnMove?.Invoke(direction);
+            OnMove?.Invoke(direction);
         }
 
         public void OnStartGame()
         {
-            this.isActive = true;
+            _isActive = true;
         }
 
         public void OnFinishGame()
         {
-            this.isActive = false;
+            _isActive = false;
         }
     }
 }

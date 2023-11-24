@@ -5,16 +5,16 @@ namespace _DI_OTUS_GULKIN_.Scripts.ServiceLocators
     public sealed class GameLocatorInstaller : MonoBehaviour
     {
         [SerializeField]
-        private GameLocator gameLocator;
+        private GameLocator _gameLocator;
 
         [SerializeField]
-        private MonoBehaviour[] gameServices;
+        private MonoBehaviour[] _gameServices;
 
         private void Awake()
         {
-            foreach (var service in this.gameServices)
+            foreach (var service in _gameServices)
             {
-                this.gameLocator.AddService(service);
+                _gameLocator.AddService(service);
             }
         }
     }

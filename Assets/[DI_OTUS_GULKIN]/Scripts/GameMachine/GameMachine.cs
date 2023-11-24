@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _DI_OTUS_GULKIN_.Scripts.Refactoring;
 using UnityEngine;
 
 namespace _DI_OTUS_GULKIN_.Scripts
@@ -11,7 +12,7 @@ namespace _DI_OTUS_GULKIN_.Scripts
         FINISH = 3,
     }
     
-    public sealed class GameMachine : MonoBehaviour
+    public sealed class GameMachine : MonoBehaviour, IGameMachine
     {
        public GameState GameState
         {
